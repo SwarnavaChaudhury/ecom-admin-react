@@ -14,6 +14,7 @@ import { IoSearchSharp } from "react-icons/io5";
 import { IoIosColorPalette } from "react-icons/io";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import Breadcrumb from '../common/Breadcrumb';
 
 
 
@@ -43,32 +44,8 @@ export default function SubCateAdd() {
         <>
 
 
-            <section className='w-full'>
-                <div className='grid grid-cols-[15%_auto] gap-5'>
 
-                    <div className=''>
-                        <SideBar />
-                    </div>
-                    <div>
-                        <Header />
-
-                        <div className='w-full flex items-center justify-start gap-2 text-stone-700 border-0 border-b-2 border-stone-400 py-2 mb-5 text-xl'>
-
-                            <Link to='/home' className='flex items-center justify-start gap-1'>
-                                <MdHomeFilled className='text-blue-500' />
-                                Home
-                            </Link>
-                            /
-                            <span className='flex items-center justify-start gap-1'>
-                                <FaBarsStaggered className='text-blue-500' />
-                                Sub-Category
-                            </span>
-                            /
-                            <span>
-                                View
-                            </span>
-                        </div>
-
+                        <Breadcrumb fst_para={<><FaBarsStaggered className='text-blue-500' /> Sub-Category</>} fst_path="/category/sub-category/view" snd_para="Add" />
 
 
 
@@ -153,14 +130,6 @@ export default function SubCateAdd() {
 
                         </div>
 
-
-
-
-                        <Footer />
-
-                    </div>
-                </div>
-            </section>
 
 
         </>

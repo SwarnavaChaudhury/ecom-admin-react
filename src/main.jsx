@@ -34,6 +34,7 @@ import FaqAdd from './components/pages/FaqAdd.jsx'
 import FaqView from './components/pages/FaqView.jsx'
 import Profile from './components/pages/Profile.jsx'
 import CompanyProfile from './components/pages/CompanyProfile.jsx'
+import AppLayout from './AppLayout.jsx'
 
 
 
@@ -50,60 +51,66 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<Login />} />
-      <Route path='/dashboard' element={<Dashboard />} />
-      <Route path='/home' element={<Dashboard />} />
-      <Route path='/user' element={<User />} />
-      <Route path='/enquiry' element={<Enquiry />} />
-      <Route path='/newsletter' element={<Newsletter />} />
-      <Route path='/color'>
-        <Route path='add' element={<ColorAdd />} />
-        <Route path='view' element={<ColorView />} />
-      </Route>
-      <Route path='/material'>
-        <Route path='add' element={<MaterialAdd />} />
-        <Route path='view' element={<MaterialView />} />
-      </Route>
-      <Route path='/category'>
-        <Route path='add' element={<ParentCateAdd />} />
-        <Route path='view' element={<ParentCateView />} />
-        <Route path='sub-category'>
-          <Route path='add' element={<SubCateAdd />} />
-          <Route path='view' element={<SubCateView />} />
+
+
+      <Route element={<AppLayout />}>
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/home' element={<Dashboard />} />
+        <Route path='/user' element={<User />} />
+        <Route path='/enquiry' element={<Enquiry />} />
+        <Route path='/newsletter' element={<Newsletter />} />
+        <Route path='/color'>
+          <Route path='add' element={<ColorAdd />} />
+          <Route path='view' element={<ColorView />} />
         </Route>
-        <Route path='sub-sub-category'>
-          <Route path='add' element={<SubSubCateAdd />} />
-          <Route path='view' element={<SubSubCateView />} />
+        <Route path='/material'>
+          <Route path='add' element={<MaterialAdd />} />
+          <Route path='view' element={<MaterialView />} />
         </Route>
+        <Route path='/category'>
+          <Route path='add' element={<ParentCateAdd />} />
+          <Route path='view' element={<ParentCateView />} />
+          <Route path='sub-category'>
+            <Route path='add' element={<SubCateAdd />} />
+            <Route path='view' element={<SubCateView />} />
+          </Route>
+          <Route path='sub-sub-category'>
+            <Route path='add' element={<SubSubCateAdd />} />
+            <Route path='view' element={<SubSubCateView />} />
+          </Route>
+        </Route>
+        <Route path='/product'>
+          <Route path='add' element={<ProductAdd />} />
+          <Route path='view' element={<ProductView />} />
+        </Route>
+        <Route path='/why-choose-use'>
+          <Route path='add' element={<WhyChooseUsAdd />} />
+          <Route path='view' element={<WhyChooseUsView />} />
+        </Route>
+        <Route path='/order'>
+          <Route path='view' element={<Orders />} />
+        </Route>
+        <Route path='/slider'>
+          <Route path='add' element={<SliderAdd />} />
+          <Route path='view' element={<SliderView />} />
+        </Route>
+        <Route path='/country'>
+          <Route path='add' element={<CountryAdd />} />
+          <Route path='view' element={<CountryView />} />
+        </Route>
+        <Route path='/testimonial'>
+          <Route path='add' element={<TestimonialAdd />} />
+          <Route path='view' element={<TestimonialView />} />
+        </Route>
+        <Route path='/faq'>
+          <Route path='add' element={<FaqAdd />} />
+          <Route path='view' element={<FaqView />} />
+        </Route>
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/company-profile' element={<CompanyProfile />} />
       </Route>
-      <Route path='/product'>
-        <Route path='add' element={<ProductAdd />} />
-        <Route path='view' element={<ProductView />} />
-      </Route>
-      <Route path='/why-choose-use'>
-        <Route path='add' element={<WhyChooseUsAdd />} />
-        <Route path='view' element={<WhyChooseUsView />} />
-      </Route>
-      <Route path='/order'>
-        <Route path='view' element={<Orders />} />
-      </Route>
-      <Route path='/slider'>
-        <Route path='add' element={<SliderAdd />} />
-        <Route path='view' element={<SliderView />} />
-      </Route>
-      <Route path='/country'>
-        <Route path='add' element={<CountryAdd />} />
-        <Route path='view' element={<CountryView />} />
-      </Route>
-      <Route path='/testimonial'>
-        <Route path='add' element={<TestimonialAdd />} />
-        <Route path='view' element={<TestimonialView />} />
-      </Route>
-      <Route path='/faq'>
-        <Route path='add' element={<FaqAdd />} />
-        <Route path='view' element={<FaqView />} />
-      </Route>
-      <Route path='/profile' element={<Profile />} />
-      <Route path='/company-profile' element={<CompanyProfile />} />
+
+
     </Routes>
   </BrowserRouter>
 )
